@@ -27,3 +27,6 @@ Sources:
 Source: https://github.com/CatCodeMe/catcodeme.github.io/blob/81e0989c95a554052a7227c5b6de7fe2e2b1ff03/quartz/styles/external-links.scss
 Source: https://quartz.eilleeenz.com/Quartz-customization-log#underline-external-links-in-page-bodies-and-lighter
 
+## Custom End of Article separator
+
+Source: https://github.com/jackyzha0/jackyzha0.github.io/blob/v4/quartz/styles/custom.scss
