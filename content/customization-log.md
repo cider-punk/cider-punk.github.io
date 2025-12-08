@@ -46,3 +46,7 @@ Source: https://quartz.eilleeenz.com/Quartz-customization-log#remove-the-tags-in
 ## Customized RecentNote
 
 ...
+
+## Putting date created & modified on content pages, but not index
+
+Source: https://quartz.eilleeenz.com/Quartz-customization-log#putting-date-created--modified-on-content-pages-but-not-index

@@ -29,3 +29,13 @@ export function formatDate(d: Date, locale: ValidLocale = "en-US"): string {
 export function Date({ date, locale }: Props) {
   return <time datetime={date.toISOString()}>{formatDate(date, locale)}</time>
 }
+
+export function _getDateCustom(cfg: GlobalConfiguration, data: QuartzPluginData, dateType: 'modified' | 'created'): Date | undefined {
+  // Check if the dateType provided is valid
+  if (dateType !== 'modified' && dateType !== 'created') {
+    throw new Error(`Invalid date type '${dateType}'. Valid options are 'modified' or 'created'.`)
+  }
+  
+  // Return the respective date based on the given dateType
+  return data.dates?.[dateType]
+}
