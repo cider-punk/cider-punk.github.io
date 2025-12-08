@@ -38,3 +38,7 @@ Source: https://quartz.eilleeenz.com/Quartz-customization-log#adding-permalink-a
 ## Fixed popover on footnotes
 
 Source: https://quartz.eilleeenz.com/Quartz-customization-log#fixing-popover-on-footnotes-and-subtitles
+
+## Remove the tags in tag pages
+
+Source: https://quartz.eilleeenz.com/Quartz-customization-log#remove-the-tags-in-tag-pages
