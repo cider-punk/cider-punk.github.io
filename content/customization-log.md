@@ -22,3 +22,8 @@ Sources:
 - https://github.com/CatCodeMe/catcodeme.github.io
 - https://quartz.eilleeenz.com/Quartz-customization-log#floatingbuttons-by-catcodeme
 
+## External Links
+
+Source: https://github.com/CatCodeMe/catcodeme.github.io/blob/81e0989c95a554052a7227c5b6de7fe2e2b1ff03/quartz/styles/external-links.scss
+Source: https://quartz.eilleeenz.com/Quartz-customization-log#underline-external-links-in-page-bodies-and-lighter
+
