@@ -28,9 +28,16 @@ export default ((opts?: Partial<ContentMetaOptions>) => {
 
     if (text) {
       const segments: (string | JSX.Element)[] = []
+      const subtitles: (string | JSX.Element)[] = []
 
       if (fileData.dates) {
         segments.push(<Date date={getDate(cfg, fileData)!} locale={cfg.locale} />)
+      }
+
+      // @note - Custom field
+      if (fileData.frontmatter?.subtitle) {
+        const uppercaseSubtitle = fileData.frontmatter.subtitle //.toUpperCase()
+        subtitles.push(`${uppercaseSubtitle}`)
       }
 
       // Display reading time if enabled
@@ -43,9 +50,19 @@ export default ((opts?: Partial<ContentMetaOptions>) => {
       }
 
       return (
-        <p show-comma={options.showComma} class={classNames(displayClass, "content-meta")}>
-          {segments}
-        </p>
+        <>
+          {subtitles.length > 0 && (
+            <p
+              style={{ margin: "0", padding: "0" }}
+              class={classNames(displayClass, "content-meta")}
+            >
+              <span className="subtitle">{subtitles}</span>
+            </p>
+          )}
+          <p show-comma={options.showComma} class={classNames(displayClass, "content-meta")}>
+            {segments}
+          </p>
+        </>
       )
     } else {
       return null

@@ -30,3 +30,7 @@ Source: https://quartz.eilleeenz.com/Quartz-customization-log#underline-external
 ## Custom End of Article separator
 
 Source: https://github.com/jackyzha0/jackyzha0.github.io/blob/v4/quartz/styles/custom.scss
+
+## Article Subtitles
+
+Source: https://quartz.eilleeenz.com/Quartz-customization-log#adding-permalink-and-subtitle-to-the-frontmatter
