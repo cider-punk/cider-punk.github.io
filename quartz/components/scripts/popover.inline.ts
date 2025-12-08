@@ -2,6 +2,10 @@ import { computePosition, flip, inline, shift } from "@floating-ui/dom"
 import { normalizeRelativeURLs } from "../../util/path"
 import { fetchCanonical } from "./util"
 
+function isFootnoteLink(link: HTMLAnchorElement): boolean {
+  return link.id.startsWith("user-content-fnref-")
+}
+
 const p = new DOMParser()
 let activeAnchor: HTMLAnchorElement | null = null
 
@@ -87,19 +91,26 @@ async function mouseEnterHandler(
           break
       }
       break
+    // @note - Custom default case to fix footnote links
     default:
       const contents = await response.text()
       const html = p.parseFromString(contents, "text/html")
       normalizeRelativeURLs(html, targetUrl)
-      // prepend all IDs inside popovers to prevent duplicates
-      html.querySelectorAll("[id]").forEach((el) => {
-        const targetID = `popover-internal-${el.id}`
-        el.id = targetID
-      })
-      const elts = [...html.getElementsByClassName("popover-hint")]
-      if (elts.length === 0) return
 
-      elts.forEach((elt) => popoverInner.appendChild(elt))
+      if (isFootnoteLink(link)) {
+        const footnoteId = link.id.replace("user-content-fnref-", "user-content-fn-")
+        const footnoteElement = html.getElementById(footnoteId)
+        if (footnoteElement) {
+          const pElement = footnoteElement.querySelector("p")
+          if (pElement) {
+            popoverInner.appendChild(pElement.cloneNode(true))
+          }
+        }
+      } else {
+        const elts = [...html.getElementsByClassName("popover-hint")]
+        if (elts.length === 0) return
+        elts.forEach((elt) => popoverInner.appendChild(elt))
+      }
   }
 
   if (!!document.getElementById(popoverId)) {

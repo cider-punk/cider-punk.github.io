@@ -34,3 +34,7 @@ Source: https://github.com/jackyzha0/jackyzha0.github.io/blob/v4/quartz/styles/c
 ## Article Subtitles
 
 Source: https://quartz.eilleeenz.com/Quartz-customization-log#adding-permalink-and-subtitle-to-the-frontmatter
+
+## Fixed popover on footnotes
+
+Source: https://quartz.eilleeenz.com/Quartz-customization-log#fixing-popover-on-footnotes-and-subtitles
