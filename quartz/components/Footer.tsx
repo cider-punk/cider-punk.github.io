@@ -3,6 +3,9 @@ import style from "./styles/footer.scss"
 import { version } from "../../package.json"
 import { i18n } from "../i18n"
 
+// @ts-ignore
+import script from "./scripts/custom/randomPage.inline"
+
 interface Options {
   links: Record<string, string>
 }
@@ -12,7 +15,7 @@ export default ((opts?: Options) => {
     const year = new Date().getFullYear()
     const links = opts?.links ?? []
     return (
-      <footer class={`${displayClass ?? ""}`}>
+      <footer class={`${displayClass ?? ""} footer`}>
         <p>
           {i18n(cfg.locale).components.footer.createdWith}{" "}
           <a href="https://quartz.jzhao.xyz/">Quartz v{version}</a> © {year}
@@ -24,10 +27,22 @@ export default ((opts?: Options) => {
             </li>
           ))}
         </ul>
+
+        <p></p>
+        <ul>
+          <li>
+            <a href="#">Scroll to top ↑</a>
+          </li>
+          <li>
+            {/* @todo - Mouse icon not showing up as expected */}
+            <a id="random-page-button">Random Page 🎲</a>
+          </li>
+        </ul>
       </footer>
     )
   }
 
   Footer.css = style
+  Footer.afterDOMLoaded = script
   return Footer
 }) satisfies QuartzComponentConstructor
