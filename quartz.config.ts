@@ -94,6 +94,7 @@ const config: QuartzConfig = {
       Plugin.CrawlLinks({ markdownLinkResolution: "shortest", openLinksInNewTab: true }),
       Plugin.Description(),
       Plugin.Latex({ renderEngine: "katex" }),
+      Plugin.ClickableImages(),
     ],
     filters: [Plugin.RemoveDrafts()],
     emitters: [
