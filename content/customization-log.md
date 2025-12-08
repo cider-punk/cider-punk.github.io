@@ -42,3 +42,7 @@ Source: https://quartz.eilleeenz.com/Quartz-customization-log#fixing-popover-on-
 ## Remove the tags in tag pages
 
 Source: https://quartz.eilleeenz.com/Quartz-customization-log#remove-the-tags-in-tag-pages
+
+## Customized RecentNote
+
+...

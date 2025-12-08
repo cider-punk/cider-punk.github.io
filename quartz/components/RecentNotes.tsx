@@ -48,13 +48,13 @@ export default ((userOpts?: Partial<Options>) => {
                 <div class="section">
                   <div class="desc">
                     <h3>
-                      <a href={resolveRelative(fileData.slug!, page.slug!)} class="internal">
+                      <a href={resolveRelative(fileData.slug!, page.slug!)} class="internal recent-note-link">
                         {title}
                       </a>
                     </h3>
                   </div>
                   {page.dates && (
-                    <p class="meta">
+                    <p class="meta recent-note-date">
                       <Date date={getDate(cfg, page)!} locale={cfg.locale} />
                     </p>
                   )}
