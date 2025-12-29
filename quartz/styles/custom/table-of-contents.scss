@@ -1,0 +1,8 @@
+
+ul.toc-content.overflow {
+  :not(.depth-0) {
+    a::before {
+      content: "– ";
+    }
+  }
+}

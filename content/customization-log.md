@@ -50,3 +50,7 @@ Source: https://quartz.eilleeenz.com/Quartz-customization-log#remove-the-tags-in
 ## Putting date created & modified on content pages, but not index
 
 Source: https://quartz.eilleeenz.com/Quartz-customization-log#putting-date-created--modified-on-content-pages-but-not-index
+
+## Custom decoration on ToC entries
+
+Just to make it easier to differentiate headings with long names in the Table of Contents
